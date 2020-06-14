@@ -127,3 +127,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+
+# Local imagestore Libraries (image collection which is not in current use on the web site
+HTML_Templates/
+Image_Store/
+Original_Images/
