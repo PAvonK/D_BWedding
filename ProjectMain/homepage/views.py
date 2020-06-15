@@ -16,3 +16,6 @@ def accommodation(request):
 
 def contact(request):
     return render(request, 'homepage/contact.html')
+
+def test(request):
+    return render(request, 'homepage/test.html')

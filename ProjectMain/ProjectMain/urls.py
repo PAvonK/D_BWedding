@@ -24,4 +24,5 @@ urlpatterns = [
     path('gallery/', user_views.gallery, name='gallery'),
     path('accommodation/', user_views.accommodation, name='accommodation'),
     path('contact/', user_views.contact, name='contact'),
+    path('test/', user_views.test, name='test'),
 ]
