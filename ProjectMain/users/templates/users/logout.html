@@ -1,0 +1,24 @@
+{% extends "homepage/base.html" %}
+{% load static %}
+
+{% block content %}
+
+<!-- Start content Section-->
+<div class='content-section pt-5 text-right'>
+    <div class='container'>
+        <div class='row'>
+            <div class='col-md-12 pr-5'>
+                <h3>You have been logged out</h3>
+                <div class='border-top pt-3'>
+                    <small class='text-muted'>
+                        <a href="{% url 'login' %}">Log In Again</a>
+                    </small>
+                </div>            
+            </div>
+            
+        </div>
+    </div>
+</div>>
+<!-- End content Section-->
+
+{% endblock content %}
