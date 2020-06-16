@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
@@ -11,11 +12,17 @@ def story(request):
 def gallery(request):
     return render(request, 'homepage/gallery.html')
 
-def accommodation(request):
-    return render(request, 'homepage/accommodation.html')
+@login_required
+def location(request):
+    return render(request, 'homepage/location.html')
 
 def contact(request):
     return render(request, 'homepage/contact.html')
 
 def test(request):
     return render(request, 'homepage/test.html')
+
+@login_required
+def rsvp(request):
+    return render(request, 'homepage/rsvp.html')
+
