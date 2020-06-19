@@ -33,6 +33,7 @@ ALLOWED_HOSTS = ['*']
 INSTALLED_APPS = [
     'homepage.apps.HomepageConfig',
     'users.apps.UsersConfig',
+    'rsvp.apps.RsvpConfig',
     'crispy_forms',
     'django.contrib.admin',
     'django.contrib.auth',

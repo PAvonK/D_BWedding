@@ -22,7 +22,3 @@ def contact(request):
 def test(request):
     return render(request, 'homepage/test.html')
 
-@login_required
-def rsvp(request):
-    return render(request, 'homepage/rsvp.html')
-

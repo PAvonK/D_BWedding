@@ -18,6 +18,7 @@ from django.contrib.auth import views as auth_views
 from django.urls import path, include
 from homepage import views as homepage_views
 from users import views as user_views
+from rsvp import views as rsvp_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -29,6 +30,6 @@ urlpatterns = [
     path('location/', homepage_views.location, name='location'),
     path('contact/', homepage_views.contact, name='contact'),
     path('test/', homepage_views.test, name='test'),
-    path('rsvp/', homepage_views.rsvp, name='rsvp'),
+    path('rsvp/', rsvp_views.rsvp, name='rsvp'),
     path('profile/', user_views.profile, name='profile'),
 ]
