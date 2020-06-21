@@ -66,6 +66,7 @@
                                         {% if user.is_authenticated %}
                                             <li><a href="{% url 'location' %}">Location Details</a></li>
                                             <li><a href="{% url 'rsvp' %}">Rsvp</a></li>
+                                            <li><a href="{% url 'rsvp2' %}">Rsvp2</a></li>
                                             <li><a href="{% url 'profile' %}">Profile</a></li>
                                             <li><a href="{% url 'logout' %}">Logout</a></li>
                                         {% else %}
@@ -87,6 +88,13 @@
 
     <!-- Content Section -->
     <div>
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert alert-{{ message.tags }}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
         {% block content %}{% endblock %}
     </div>
 
