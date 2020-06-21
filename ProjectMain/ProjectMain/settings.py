@@ -34,7 +34,6 @@ INSTALLED_APPS = [
     'homepage.apps.HomepageConfig',
     'users.apps.UsersConfig',
     'rsvp.apps.RsvpConfig',
-    'rsvp2.apps.Rsvp2Config',
     'crispy_forms',
     'django.contrib.admin',
     'django.contrib.auth',

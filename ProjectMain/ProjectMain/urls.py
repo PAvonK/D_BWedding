@@ -19,7 +19,6 @@ from django.urls import path, include
 from homepage import views as homepage_views
 from users import views as user_views
 from rsvp import views as rsvp_views
-from rsvp2 import views as rsvp2_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -37,6 +36,4 @@ urlpatterns = [
     path('rsvp/', rsvp_views.rsvp, name='rsvp'),
     
     path('profile/', user_views.profile, name='profile'),
-    
-    path('rsvp2/', rsvp2_views.rsvp2, name='rsvp2'),
 ]
