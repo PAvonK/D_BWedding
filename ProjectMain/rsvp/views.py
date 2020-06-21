@@ -1,39 +1,21 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
-from .forms import RsvpForm, SnippetForm
-
-
-# Create your views here.
+from . import forms
 
 @login_required
 def rsvp(request):
-    
-    if request.method == "POST":
-        form = RsvpForm(request.POST)
-        if form.is_valid():
-            #form.save()
-            name = form.cleaned_data.get['name']
-            #name_last = form.cleaned_data['name_last']
-            email = form.cleaned_data['email']
-            messages.success(request, f'Thank you {name} for your RSVP!!!')
-            return redirect('location')
-            
-            print(name)
-            
-
-    else:
-        form = RsvpForm()
-    return render(request, 'rsvp/rsvp.html', {'form': form})
-
-
-def snippet_detail(request):
-
-    if request.method == "POST":
-        form = SnippetForm(request.POST)
+    if request.method == 'POST':
+        form = forms.Rsvp_Form(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-
-
-    form = SnippetForm()
+            full_name = form.cleaned_data['full_name']
+            email = form.cleaned_data['email']
+            number_attending = form.cleaned_data['number_attending']
+            message_for_the_happy_couple = form.cleaned_data['message_for_the_happy_couple']
+            messages.success(request, f'Thank you {full_name} for your RSVP!!!')
+            return redirect('location')
+    
+    else:
+        form = forms.Rsvp_Form()
     return render(request, 'rsvp/rsvp.html', {'form': form})

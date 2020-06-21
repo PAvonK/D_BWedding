@@ -1,8 +1,6 @@
 from django.db import models
 from django.utils import timezone
 
-
-
 class rsvp(models.Model):
     
     last_name = models.CharField(max_length=50)

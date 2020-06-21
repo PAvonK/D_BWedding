@@ -3,5 +3,5 @@ from . import views
 
 urlpatterns = [
     path('', views.rsvp),
-    path('snippet', views.snippet_detail),
+    path('response/', views.response_detail),
 ]

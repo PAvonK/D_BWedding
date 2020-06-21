@@ -23,16 +23,20 @@ from rsvp2 import views as rsvp2_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    
     path('login/', auth_views.LoginView.as_view(template_name='users/login.html'), name='login'),
     path('logout/', auth_views.LogoutView.as_view(template_name='users/logout.html'), name='logout'),
+    
     path('', include('homepage.urls')),
     path('story/', homepage_views.story, name='story'),
     path('gallery/', homepage_views.gallery, name='gallery'),
     path('location/', homepage_views.location, name='location'),
     path('contact/', homepage_views.contact, name='contact'),
     path('test/', homepage_views.test, name='test'),
+    
     path('rsvp/', rsvp_views.rsvp, name='rsvp'),
-    #path('rsvp/', rsvp_views.snippet_detail, name='rsvp'),
+    
     path('profile/', user_views.profile, name='profile'),
+    
     path('rsvp2/', rsvp2_views.rsvp2, name='rsvp2'),
 ]
