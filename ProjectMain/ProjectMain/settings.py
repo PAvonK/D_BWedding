@@ -11,6 +11,15 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+import json
+
+# To use for SECRET_KEY config.json file in development (VSCode) 
+with open('C:\Programming_Master\Projects\D_BWedding\config.json') as config_file:
+    config = json.load(config_file)
+
+# To use for SECRET_KEY config.json file in production environment 
+# with open('/etc/config.json') as config_file:
+#     config = json.load(config_file)
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -20,7 +29,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'zbds=qrxp4+0fsr+!jt@v!^68&spe&7j8lzt9(vqsiu2bass$1'
+SECRET_KEY = config['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
