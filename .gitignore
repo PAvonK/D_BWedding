@@ -135,3 +135,6 @@ dmypy.json
 HTML_Templates/
 Image_Store/
 Original_Images/
+
+#json config security file
+config.json
