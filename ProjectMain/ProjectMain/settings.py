@@ -13,13 +13,11 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 import os
 import json
 
-# To use for SECRET_KEY config.json file in development (VSCode) 
+# location of config.json file in vscode development = C:\Programming_Master\Projects\D_BWedding\config.json
+# location o f config.json file in production server = /etc/config.json
+
 with open('C:\Programming_Master\Projects\D_BWedding\config.json') as config_file:
     config = json.load(config_file)
-
-# To use for SECRET_KEY config.json file in production environment 
-# with open('/etc/config.json') as config_file:
-#     config = json.load(config_file)
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
