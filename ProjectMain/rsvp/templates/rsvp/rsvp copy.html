@@ -1,0 +1,110 @@
+{% extends "homepage/base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+    
+    <!-- accommodation_area  -->
+    <div class="accommodation_area">
+        <div class="container container">
+            <div class="row">
+                    <div class="col-xl-8 offset-xl-2">
+                        <div class="section_title text-center">
+                            <h1>RSVP</h1>
+                            <p></p>
+                            <h4>Wedding Location Details</h4>
+                            <p></p>
+                            <p>Join us for our outdoor wedding! Please dress nice inas many fall colors as possible, and understand that youare most likely going to get your shoes dirty walkingthrough meadows and trees. Please wear shoes that have agood amount of support and bring a jacket! We will haveushers driving people that are worried about the walk.Be sure to include on your RSVP that you would like helpgetting to the ceremony in the ‘Messages for the HappyCouple’ section and we will be happy to assist you! <br>
+                            RSVP Below</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row no-gutters">
+                <div class="col-xl-12 col-lg-12">
+                    <div class="accommondation_image">
+                        <img src="{% static 'homepage/img/Accommodation/4.jpg' %}" alt="">
+                    </div>
+                </div>
+                <div class="col-xl-6 col-md-6">
+                    <div class="accommondation_image">
+                        <img src="{% static 'homepage/img/Accommodation/5b.jpg' %}" alt="">
+                    </div>
+                </div>
+                <div class="col-xl-6 col-md-6">
+                    <div class="accommondation_image">
+                        <img src="{% static 'homepage/img/Accommodation/6.jpg' %}" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/ accommodation_area  -->
+
+    <!-- rsvp area-->
+    <div class="attending_area plus_padding">
+        <!--<div style="padding-top: 10px;">-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-10 offset-xl-1 col-lg-10 offset-lg-1     padding:20px">
+                        <div class="main_attending_area">
+                            <div class="flower_1 d-none d-lg-block">
+                                <img src="img/appointment/flower-top.png" alt="">
+                            </div>
+                            <div class="flower_2 d-none d-lg-block">
+                                <img src="img/appointment/flower-bottom.png" alt="">
+                            </div>
+                            <div class="row justify-content-center">
+                                <div class="col-xl-7 col-lg-8">
+                                    <div class='container'>
+                                        <form method='POST'>
+                                            {% csrf_token %}
+                                            <fieldset class='form-group'>
+                                                <legend class='border-bottom    mn-4'>Please let us know if you can attend</legend>
+                                                {{ form|crispy }}
+                                            </fieldset>
+                                            <div class='form-group'>
+                                                <button class='btn btn-outline-info'    type="submit">Submit</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!--</div>-->
+    </div>
+    <!-- / attend_area -->
+
+    <!-- ================ contact section start ================= -->
+
+
+    <section class="location_area">
+        <div style="padding-top: 10px;">
+            <div class="location_info">
+                <div class="location_inner">
+                    <div class="location_top text-center">
+                            <h3>Ceremony</h3>
+                            <p>27085 Grey Moose Trail, Conifer, CO 80433  <br>
+                                    <span>2:00p - 3:00p</span> </p>
+                    </div>
+                    <div class="address_info d-flex justify-content-between">
+                        <div class="single_address text-center">
+                            <h4>Cocktails</h4>
+                            <p>3:00p - 4:30p <br>
+                                    Kim and Jay's Place</p>
+                        </div>
+                        <div class="single_address text-center">
+                            <h4>Reception</h4>
+                            <p>4:30p – 8:30p <br>
+                                Kim and Jay's Place</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--<div class="container-fluid p-0">-->
+{% endblock content %}
