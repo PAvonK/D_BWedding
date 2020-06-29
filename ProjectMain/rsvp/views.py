@@ -19,3 +19,22 @@ def rsvp(request):
     else:
         form = forms.Rsvp_Form()
     return render(request, 'rsvp/rsvp.html', {'form': form})
+
+@login_required
+def location(request):
+    return render(request, 'rsvp/location.html')
+
+# just for testing / examples - have to access by /accommodation
+@login_required
+def accommodation(request):
+    return render(request, 'rsvp/accommodation.html')
+
+# just for testing / examples - have to access by /elements
+@login_required
+def elements(request):
+    return render(request, 'rsvp/elements.html')
+
+# just for testing / examples - have to access by /rsvp1
+@login_required
+def rsvp1(request):
+    return render(request, 'rsvp/rsvp1.html')

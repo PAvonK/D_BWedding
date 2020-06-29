@@ -34,6 +34,13 @@ urlpatterns = [
     path('test/', homepage_views.test, name='test'),
     
     path('rsvp/', rsvp_views.rsvp, name='rsvp'),
+    path('location/', rsvp_views.location, name='location'),
+    # just for testing / examples - have to access by /rsvp1
+    path('rsvp1/', rsvp_views.rsvp1, name='rsvp1'),
+    # just for testing / examples - have to access by /accommodation
+    path('accommodation/', rsvp_views.accommodation, name='accommodation'),
+    # just for testing / examples - have to access by /elements
+    path('elements/', rsvp_views.elements, name='elements'),
     
     path('profile/', user_views.profile, name='profile'),
 ]
