@@ -14,7 +14,7 @@ def rsvp(request):
             number_attending = form.cleaned_data['number_attending']
             message_for_the_happy_couple = form.cleaned_data['message_for_the_happy_couple']
             messages.success(request, f'Thank you {full_name} for your RSVP!!!')
-            return redirect('location')
+            return redirect('index')
     
     else:
         form = forms.Rsvp_Form()
