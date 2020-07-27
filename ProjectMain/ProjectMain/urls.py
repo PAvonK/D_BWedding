@@ -33,7 +33,8 @@ urlpatterns = [
     path('contact/', homepage_views.contact, name='contact'),
     path('test/', homepage_views.test, name='test'),
     
-    path('rsvp/', rsvp_views.rsvp, name='rsvp'),
+    path('rsvp/', rsvp_views.rsvpData, name='rsvp'),
+    path('csv_export/', rsvp_views.csv_export, name='csv_export'),
     path('location/', rsvp_views.location, name='location'),
     # just for testing / examples - have to access by /rsvp1
     path('rsvp1/', rsvp_views.rsvp1, name='rsvp1'),

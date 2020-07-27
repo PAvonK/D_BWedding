@@ -16,9 +16,11 @@ def gallery(request):
 def location(request):
     return render(request, 'homepage/location.html')
 
+@login_required
 def contact(request):
     return render(request, 'homepage/contact.html')
 
+@login_required
 def test(request):
     return render(request, 'homepage/test.html')
 

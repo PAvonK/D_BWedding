@@ -1,10 +1,13 @@
+import csv
+from django.http import HttpResponse
 from django.shortcuts import render, redirect
-from django.contrib.auth.decorators import login_required
+from django.contrib.auth.decorators import login_required, permission_required
 from django.contrib import messages
 from . import forms
+from .models import rsvp
 
 @login_required
-def rsvp(request):
+def rsvpData(request):
     if request.method == 'POST':
         form = forms.Rsvp_Form(request.POST, request.FILES)
         if form.is_valid():
@@ -19,6 +22,21 @@ def rsvp(request):
     else:
         form = forms.Rsvp_Form()
     return render(request, 'rsvp/rsvp.html', {'form': form})
+
+@permission_required('admin.can_add_log_entry')
+def csv_export(request):
+    data = rsvp.objects.all()
+    
+    response = HttpResponse(content_type='text/csv')
+    response['Content-Disposition'] = 'attachment; filename="rsvp_responses.csv"'
+
+    writer = csv.writer(response, delimiter=',')
+    writer.writerow(['full_name', 'email', 'number_attending', 'message_for_the_happy_couple'])
+
+    for obj in data:
+        writer.writerow([obj.full_name, obj.email, obj.number_attending, obj.message_for_the_happy_couple])
+
+    return response
 
 @login_required
 def location(request):
