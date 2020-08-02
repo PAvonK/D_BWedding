@@ -52,7 +52,8 @@
                             <div class="main-menu  d-none d-lg-block">
                                 <nav>
                                     <ul id="navigation">
-                                        <li><a class="active" href="{% url 'index' %}">Home</a></li>
+                                        <li><a href="{% url 'index' %}">Home</a></li>
+                                        <li><a href="{% url 'registry' %}">Registry</a></li>
                                         <!--<li><a href="{% url 'story' %}">Our Story</a></li>-->
                                         <!--<li><a href="{% url 'gallery' %}">Gallery</a></li>-->
                                         <!--<li><a href="#">blog <i class="ti-angle-down"></i></a>
@@ -98,7 +99,20 @@
 
 
    <!-- footer_start -->
-   <footer class="footer">
+    <div class="accommodation_area">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-8 offset-xl-2">
+                <div class="section_title text-center">
+                    <!--<h2>Registry</h2>-->
+                    <h2><br><a href="https://www.target.com/gift-registry/giftgiver?registryId=8f579b34db484f60ac06d4d64f654135&lnk=registry_custom_url"><b><i>Target Registry</i></b></a><br><br><a href="https://www.crateandbarrel.com/gift-registry/doug-naes-and-bethany-sayers/r6140541"><b><i>Crate&Barrel Registry</i></b></a></h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <footer class="footer">
     <div class="footer_top">
         <div class="container">
             <div class="row">
@@ -106,6 +120,7 @@
                     <div class="quick_links">
                         <ul>
                             <li><a href="{% url 'index' %}">Home</a></li>
+                            <li><a href="{% url 'registry' %}">Registry</a></li>
                             <!--<li><a href="{% url 'story' %}">Our Story</a></li>-->
                             <!--<li><a href="{% url 'gallery' %}">Gallery</a></li>-->
                             

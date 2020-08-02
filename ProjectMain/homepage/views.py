@@ -12,6 +12,9 @@ def story(request):
 def gallery(request):
     return render(request, 'homepage/gallery.html')
 
+def registry(request):
+    return render(request, 'homepage/registry.html')
+
 @login_required
 def location(request):
     return render(request, 'homepage/location.html')

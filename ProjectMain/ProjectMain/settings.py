@@ -14,7 +14,7 @@ import os
 import json
 
 # location of config.json file in vscode development = C:\Programming_Master\Projects\D_BWedding\config.json
-# location o f config.json file in production server = /etc/config.json
+# location of config.json file in production server = /etc/config.json
 
 with open('C:\Programming_Master\Projects\D_BWedding\config.json') as config_file:
     config = json.load(config_file)

@@ -29,6 +29,7 @@ urlpatterns = [
     path('', include('homepage.urls')),
     path('story/', homepage_views.story, name='story'),
     path('gallery/', homepage_views.gallery, name='gallery'),
+    path('registry/', homepage_views.registry, name='registry'),
     path('location/', homepage_views.location, name='location'),
     path('contact/', homepage_views.contact, name='contact'),
     path('test/', homepage_views.test, name='test'),
