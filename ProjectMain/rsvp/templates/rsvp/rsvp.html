@@ -10,21 +10,20 @@
         <h3>R S V P</h3>
         </div>
     </div>
-    <!--/ bradcam_area  -->
+    <!--End bradcam_area  -->
 
     <!-- accommodation_area  -->
     <div class="accommodation_area">
         <div class="container">
                 <div class="row">
                     <div class="col-xl-8 offset-xl-2">
-                            <div class="section_title text-center">
-                                <h1>Wedding Location Details</h1>
-                                <br>
-                                <p>Join us for our outdoor wedding! Please dress nice in as many fall colors as possible, and understand that you are most likely going to get your shoes dirty walking through meadows and trees. Please wear shoes that have a good amount of support and bring a jacket! We will have ushers driving people that are worried about the walk. Be sure to include on your RSVP that you would like help getting to the ceremony in the ‘Messages for the Happy Couple’ section and we will be happy to assist you! <br><br></p>
-                                <h2>RSVP Below</h2>
-                            </div>
+                        <div class="section_title text-center">
+                            <img src="{% static 'homepage/img/banner/flowers.png' %}" alt="">
+                            <h3>Wedding Location Details</h3>
+                            <br>
+                            <p>Join us for our outdoor wedding! Please dress nice in as many fall colors as possible, and understand that you are most likely going to get your shoes dirty walking through meadows and trees. Please wear shoes that have a good amount of support and bring a jacket! We will have ushers driving people that are worried about the walk. Be sure to include on your <a href="#div_id"><i><b>RSVP</b></i></a> that you would like help getting to the ceremony in the ‘Messages for the Happy Couple’ section and we will be happy to assist you! <br></p>
                         </div>
-                    </div>
+                   </div>
             <div class="row no-gutters">
                 <div class="col-xl-12 col-lg-12">
                     <div class="accommondation_image">
@@ -44,9 +43,12 @@
             </div>
         </div>
     </div>
-    <!--/ accommodation_area  -->
+    <!--End accommodation_area  -->
+
     <p><br></p>
+
     <!-- Start Align Area -->
+    <div id="div_id"></div>
     <div class="whole-wrap">
 		<div class="container box_1170">
             <div class="row">
@@ -54,11 +56,15 @@
                     <div class="main_attending_area">
                         <div class="row justify-content-center">
                             <div class="col-xl-7 col-lg-8">
+                                
+                                <div class="section_title text-center">
+                                    <img src="{% static 'homepage/img/banner/flowers.png' %}" alt="">
+                                    <h3>R S V P</h3>
+                                </div>    
                                 <div class='container'>
                                     <form method='POST'>
                                         {% csrf_token %}
                                         <fieldset class='form-group'>
-                                            <legend class='border-bottom    mn-4'>Please let us know if you can attend</legend>
                                             {{ form|crispy }}
                                         </fieldset>
                                         <div class='form-group'>
@@ -95,6 +101,34 @@
             </div> 
         </div>
 	</div>
-	<!-- End Align Area -->
+    <!-- End Align Area -->
+
+    <!-- wedding_countdown -->
+    <div class="weeding_countdown_area">
+        <div class="flowaers_top d-none d-lg-block">
+            <img src="{% static 'homepage/img/banner/flower-top.png' %}" alt="">
+        </div>
+        <div class="flowaers_bottom d-none d-lg-block">
+            <img src="{% static 'homepage/img/banner/flower-bottom.png' %}" alt="">
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="section_title text-center">
+                        <img src="{% static 'homepage/img/banner/flowers.png' %}" alt="">
+                        <span>26th of September, 2020</span>
+                        <h3>Countdown to the Big Day</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-12">
+                    <div id="clock" class="countdown_area counter_bg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End wedding_countdown -->
 
 {% endblock content %}
